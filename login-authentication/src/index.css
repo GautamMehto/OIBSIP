@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.Button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    transform: skewX(-30deg);
+    background-color: rgb(23, 127, 255);
+    top: 0px;
+    left: -22px;
+    transition: .3s ease-in;
+}
+
+.Button:hover::before {
+    width: 0px;
+    transform: skewX(0deg);
+}
+.Login-Container , .SignUp-Container{
+    background-image: url(./Components/service-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
